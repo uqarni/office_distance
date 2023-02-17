@@ -22,13 +22,13 @@ mountainview_peeps = []
 for index, row in data.iterrows():
     if row["Geocoded latitude"] > 0 and row["Geocoded longitude"] < 0:
         person_coords = (row["Geocoded latitude"], row["Geocoded longitude"])
-        if distance.distance(person_coords, austin_coords).miles < 45:
+        if distance.distance(person_coords, austin_coords).miles < max_dist:
             austin_peeps.append(row["Work Email"])
-        if distance.distance(person_coords, glendale_coords).miles < 45:
+        if distance.distance(person_coords, glendale_coords).miles < max_dist:
             glendale_peeps.append(row["Work Email"])
-        if distance.distance(person_coords, playavista_coords).miles < 45:
+        if distance.distance(person_coords, playavista_coords).miles < max_dist:
             playavista_peeps.append(row["Work Email"])
-        if distance.distance(person_coords, mountainview_coords).miles < 45:
+        if distance.distance(person_coords, mountainview_coords).miles < max_dist:
             mountainview_peeps.append(row["Work Email"])
 
 
