@@ -4,8 +4,6 @@ from geopy import distance
 data = pd.read_csv("roster.csv")
 # Person Number,	Name, Work Email,	Job Name, Department Name, Level 01 Organization Name,	Management Level,	Employee Enterprise Hire Date,	Address Line 1,	Address Line 2,	City,	Region 2,	Postal Code,	Location Name,	Geocoded latitude,	Geocoded longitude,	Geocoded address
 
-max_distance = 45 #miles
-
 #office coordinates 
 austin_coords = (30.481609, -97.776680)
 glendale_coords = (34.146500, -118.255520)
